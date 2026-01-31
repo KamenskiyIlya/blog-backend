@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-    {% block title %}
-      <title>{{ post.title }} - Contact</title>
-    {% endblock %}
-    {% block banner %}
+  {% block title %}
+    {{ post.title }} - Contact
+  {% endblock %}
+  {% block banner %}
     <section class="mb-30px">
       <div class="container">
         <div class="hero-banner hero-banner--sm">
@@ -20,8 +20,8 @@
         </div>
       </div>
     </section>
-    {% endblock %}
-    {% block page %}
+  {% endblock %}
+  {% block page %}
     <section class="blog-post-area section-margin">
       <div class="container">
         <div class="row">
@@ -32,12 +32,12 @@
               {% else %}
                 <img class="img-fluid" src="{% static 'img/blog/blog4.png' %}" alt="">
               {% endif %}
-              <h4>{{ post.title }}</h4>
+              <h2>{{ post.title }}</h2>
               <div class="user_details">
                 <div class="mt-sm-0 mt-3">
                   <div class="media">
                     <div class="media-body">
-                      <h5>{{ post.author }}</h5>
+                      <h3>{{ post.author }}</h3>
                       <p>{{ post.published_at }}</p>
                     </div>
                   </div>
@@ -60,22 +60,22 @@
             <div class="comments-area">
               <h4>{{ post.comments|length}} Comments</h4>
               {% for comment in post.comments %}
-              <div class="comment-list">
-                <div class="single-comment justify-content-between d-flex">
-                  <div class="user justify-content-between d-flex">
-                    <div class="desc">
-                      <h5><a href="#">{{ comment.author }}</a></h5>
-                      <p class="date">{{ comment.published_at }}</p>
-                      <p class="comment">
-                          {{ comment.text }}
-                      </p>
+                <div class="comment-list">
+                  <div class="single-comment justify-content-between d-flex">
+                    <div class="user justify-content-between d-flex">
+                      <div class="desc">
+                        <h5><a href="#">{{ comment.author }}</a></h5>
+                        <p class="date">{{ comment.published_at }}</p>
+                        <p class="comment">
+                            {{ comment.text }}
+                        </p>
+                      </div>
+                    </div>
+                    <div class="reply-btn">
+                            <a href="" class="btn-reply text-uppercase">reply</a> 
                     </div>
                   </div>
-                  <div class="reply-btn">
-                          <a href="" class="btn-reply text-uppercase">reply</a> 
-                  </div>
                 </div>
-              </div>
               {% endfor %}                                             				
             </div>
           </div>
@@ -105,4 +105,4 @@
         </div>
       </div>
     </section>
-    {% endblock %}
+  {% endblock %}

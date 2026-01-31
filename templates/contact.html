@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 {% extends 'base.html' %}
 {% load static %}
-    {% block title %}
-      <title>Sensive Blog - Contact</title>
-    {% endblock %}
-    {% block banner %}
+  {% block title %}
+    Sensive Blog - Contact
+  {% endblock %}
+  {% block banner %}
     <section class="mb-30px">
       <div class="container">
         <div class="hero-banner hero-banner--sm">
@@ -20,12 +20,12 @@
         </div>
       </div>
     </section>
-    {% endblock %}
-    {% block page %}
+  {% endblock %}
+  {% block page %}
     <section class="section-margin--small section-margin">
       <div class="container">
         <div class="d-none d-sm-block mb-5 pb-4">
-          {{ html_map|safe}}
+          {{ html_map|safe }}
         </div>
 
 
@@ -34,21 +34,21 @@
             <div class="media contact-info">
               <span class="contact-info__icon"><i class="ti-home"></i></span>
               <div class="media-body">
-                <h3>California United States</h3>
+                <h2>California United States</h2>
                 <p>Santa monica bullevard</p>
               </div>
             </div>
             <div class="media contact-info">
               <span class="contact-info__icon"><i class="ti-headphone"></i></span>
               <div class="media-body">
-                <h3><a href="tel:454545654">00 (440) 9865 562</a></h3>
+                <h2><a href="tel:454545654">00 (440) 9865 562</a></h2>
                 <p>Mon to Fri 9am to 6pm</p>
               </div>
             </div>
             <div class="media contact-info">
               <span class="contact-info__icon"><i class="ti-email"></i></span>
               <div class="media-body">
-                <h3><a href="mailto:support@colorlib.com">support@colorlib.com</a></h3>
+                <h2><a href="mailto:support@colorlib.com">support@colorlib.com</a></h2>
                 <p>Send us your query anytime!</p>
               </div>
             </div>
@@ -81,4 +81,4 @@
         </div>
       </div>
     </section>
-    {% endblock %}
+  {% endblock %}
